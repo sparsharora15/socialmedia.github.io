@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/utility.css">
+    <title>SIGNUP PAGE</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="conatiner2">
+            <div class="field">
+                <h1>Signup</h1>
+                <input id="phone" type="phone" placeholder="Enter your phone number" onchange="handlePhone()">
+                <input id="email" type="email" placeholder="Enter your Email" onchange="handleEmail()">
+                <input id="text" type="text" placeholder="Enter your name" onchange="handleName()">
+                <input id="password" type="password" placeholder="Enter your password" onchange="handlePassword()">
+            </div>
+            <div class="flex justify-contnt align-item direction-row">
+                <button class="btn" onclick="signup()">SIGNUP</button>
+                <a class="btn1"href="./logIn.html">Already a user?</a>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: url(../IMG/leone-venter-VieM9BdZKFo-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    margin-top: 25px;
+    display: flex;
+    opacity: 85%;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 64rem;
+    background-color: rgb(209 209 209);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 21px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    /* overflow: none; */
+    margin-bottom: 1rem;
+    /* justify-content: center; */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 50px;
+
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    margin-bottom: 5px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav h2 {
+    margin-top: 1em;
+}
+
+.post {
+    width: 60%;
+    box-shadow: rgba(134, 176, 225, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: 0.4px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    /* height: 50%; */
+    background-color: white;
+    border-radius: 13px 0px 13px 0px;
+    margin-top: 2em;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.image img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.image {
+    margin-left: 0.2em;
+    width: 21%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .container,
+    .post {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#inputComment {
+    position:fixed;
+    bottom:5rem;
+    width: 55rem;
+    height : 5rem;
+    
+}
+#ButtonComment {
+    position: fixed;
+    bottom: 1rem;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+#ButtonComment:hover{
+    background-color: black;
+    color: white;
+}
+
+nav img{
+    position: absolute;
+    height: 5rem;
+    right: 39rem;
+    top: 0px;
+    /* filter: invert(100%); */
+    cursor: pointer;
+}
+
+.text{
+    position: absolute;
+    height: 4rem;
+    right: 38.4rem;
+    top: 42px;
+    /* cursor: pointer; */
+    cursor: pointer;
+    color: black;
+    
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn{
+    height: 2rem;
+    width: 11rem;
+    border-radius: 18px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none ;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black ;
+}
+.inputArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.para {
+    margin: 5px;
+}
