@@ -235,6 +235,21 @@ async function like(postid) {
     }
 }
 
+async function deletePost (postid) {
+    try{
+        console.log(postid)
+        // await axios.delete('http://localhost:5000/deletePost',data)
+        await axios({
+            method: "delete",
+            url: "https://social-media-app-v1-final.herokuapp.com/deletePost",
+            data: { postid: postid },
+        })
+        // window.location.reload()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 const fetchPosts = async () => {
     let posts = await fetch('https://social-media-app-v1-final.herokuapp.com/getAllPosts')
     posts = await posts.json()
@@ -248,7 +263,8 @@ const fetchPosts = async () => {
                 `
                 <div class="post">
           
-                <h4 class="heading">${result.userId.name}</h4>  
+                <h4 class="heading">${result.userId.name}
+                </h4>  <button class = "Del" type="button" name="${result._id}" onclick="deletePost(this.name)">Delete</button>
                 <img src="https://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
                 <div class="image">
                 <img src="./IMG/like.jpg" alt="" name="${result._id}" onclick="like(this.name)"><p>${result.totalLikes}</p>
@@ -264,6 +280,7 @@ const fetchPosts = async () => {
           
                 <h4 class="heading">${result.userId.name}</h4>  
                 <p>${result.data}</p>
+                <button class = "Del" type="button" name="${result._id}" onclick="deletePost(this.name)">Delete</button>
                 <img src="https://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
                 <div class="image">
                 <img src="./IMG/like.jpg" alt="" name="${result._id}" onclick="like(this.name)"><p>${result.totalLikes}</p>
@@ -276,9 +293,10 @@ const fetchPosts = async () => {
             content =
                 `
                 <div class="post">
-          
-                <h4 class="heading">${result.userId.name}</h4>  
+                
+                <h4 class="heading">${result.userId.name}</h4> 
                 <p>${result.data}</p>
+                <button class = "Del" type="button" name="${result._id}" onclick="deletePost(this.name)">Delete</button>
                 <div class="image">
                 <img src="./IMG/like.jpg" alt="" name="${result._id}" onclick="like(this.name)"><p>${result.totalLikes}</p>
                 <img src="./IMG/comment.jpg" alt="" name="${result._id}" onclick="NavigateToComment(this.name)">
