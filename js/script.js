@@ -33,7 +33,7 @@ async function signup() {
             },
             body: JSON.stringify(data)
         }
-        let res = await fetch('http://social-media-app-v1-final.herokuapp.com/signup', options)
+        let res = await fetch('https://social-media-app-v1-final.herokuapp.com/signup', options)
         res = await res.json()
         console.log(data);
         console.log(res)
@@ -101,7 +101,7 @@ async function Login() {
         body: JSON.stringify(data)
     }
     try {
-        let Get = await fetch('http://social-media-app-v1-final.herokuapp.com/login', options)
+        let Get = await fetch('https://social-media-app-v1-final.herokuapp.com/login', options)
         Get = await Get.json();
         if (Get.token) {
             window.location.href = "./index.html";
@@ -156,7 +156,7 @@ async function doComment() {
             },
             body: JSON.stringify(data)
         }
-        fetch('http://social-media-app-v1-final.herokuapp.com/comment', options)
+        fetch('https://social-media-app-v1-final.herokuapp.com/comment', options)
         .then(()=>{
             window.location.href = "./index.html"
         })
@@ -207,7 +207,7 @@ async function UploadPost() {
         try {
             axios({
                 method: "post",
-                url: "http://social-media-app-v1-final.herokuapp.com/newPost",
+                url: "https://social-media-app-v1-final.herokuapp.com/newPost",
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
@@ -226,7 +226,7 @@ async function like(postid) {
     try {
         await axios({
             method: "post",
-            url: "http://social-media-app-v1-final.herokuapp.com/like",
+            url: "https://social-media-app-v1-final.herokuapp.com/like",
             data: { postId: postid },
         })
         window.location.reload()
@@ -236,7 +236,7 @@ async function like(postid) {
 }
 
 const fetchPosts = async () => {
-    let posts = await fetch('http://social-media-app-v1-final.herokuapp.com/getAllPosts')
+    let posts = await fetch('https://social-media-app-v1-final.herokuapp.com/getAllPosts')
     posts = await posts.json()
     localStorage.setItem('posts', JSON.stringify(posts));
     const container = document.getElementById('containers');
@@ -249,7 +249,7 @@ const fetchPosts = async () => {
                 <div class="post">
           
                 <h4 class="heading">${result.userId.name}</h4>  
-                <img src="http://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
+                <img src="https://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
                 <div class="image">
                 <img src="./IMG/like.jpg" alt="" name="${result._id}" onclick="like(this.name)"><p>${result.totalLikes}</p>
                 <img src="./IMG/comment.jpg" alt="" name="${result._id}" onclick="NavigateToComment(this.name)">
@@ -264,7 +264,7 @@ const fetchPosts = async () => {
           
                 <h4 class="heading">${result.userId.name}</h4>  
                 <p>${result.data}</p>
-                <img src="http://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
+                <img src="https://social-media-app-v1-final.herokuapp.com/${result.picture}" alt="">
                 <div class="image">
                 <img src="./IMG/like.jpg" alt="" name="${result._id}" onclick="like(this.name)"><p>${result.totalLikes}</p>
                 <img src="./IMG/comment.jpg" alt="" name="${result._id}" onclick="NavigateToComment(this.name)">
