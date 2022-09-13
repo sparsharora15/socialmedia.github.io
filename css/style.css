@@ -140,30 +140,29 @@ nav h2 {
     color: white;
 }
 
-nav img{
+/* nav img{
     position: absolute;
     height: 5rem;
     right: 39rem;
     top: 0px;
     /* filter: invert(100%); */
-    cursor: pointer;
-}
-
-.text{
-    position: absolute;
-    height: 4rem;
-    right: 38.4rem;
-    top: 42px;
     /* cursor: pointer; */
+    /* }  */
+    
+    .text{
+        text-decoration: none;
     cursor: pointer;
     color: black;
     
 }
 .left{
     display: flex;
+    text-decoration: none;
     align-items: center;
+    height: 5rem;
     justify-content: center;
     cursor: pointer;
+
 }
 
 .btn{
@@ -198,4 +197,15 @@ nav img{
     cursor: pointer;
     color: white;
     background-color: red;
+}
+.left img {
+    height: 5rem;
+    margin-bottom: -14px;
+    display: block;
+    margin: auto;
+}
+.left p{
+    color: black;
+    text-decoration: none;
+    margin: -10px;
 }

@@ -244,7 +244,8 @@ async function deletePost (postid) {
             url: "https://social-media-app-v1-final.herokuapp.com/deletePost",
             data: { postid: postid },
         })
-        // window.location.reload()
+        alert("Post Deleted!!")
+        window.location.reload()
         } catch (error) {
             console.log(error)
         }
